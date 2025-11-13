@@ -12,7 +12,7 @@ public class Sala {
         visitantes--;
     }
 
-    public int getVisitantes() {
+    synchronized int getVisitantes() {
         return visitantes;
         
     }

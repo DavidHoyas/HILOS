@@ -5,7 +5,7 @@ public class App {
     public static final String AFORO = "Visitantes: ";
     public static final String TOTAL = "Total de Visitantes: ";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Sala sala = new Sala();
         for (int i = 0; i < 10; i++) {
             Thread entrada = new Thread(new Entrada(sala));
@@ -21,6 +21,7 @@ public class App {
             
         }
     
+        Thread.sleep(1000);
         System.out.println(TOTAL + sala.visitantes);
 
     }
