@@ -11,13 +11,13 @@ public class Negocio {
 
     private Semaphore vender = new Semaphore(0);
 
-    void hacer() throws InterruptedException {
+    public void hacer() throws InterruptedException {
         producir.acquire();
         System.out.println(MENSAJE_ALFARERO);
         vender.release();
     }
 
-    void vender() throws InterruptedException {
+    public void vender() throws InterruptedException {
         vender.acquire();
         System.out.println(MENSAJE_VENDEDOR);
         producir.release();
