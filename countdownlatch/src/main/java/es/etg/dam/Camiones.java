@@ -20,6 +20,7 @@ public class Camiones extends Thread{
             System.out.println(MENSAJE_CAMIONES + this.id);
             cuenta.countDown();
         } catch (Exception e) {
+            e.printStackTrace();
         }
     }
     
